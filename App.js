@@ -2,11 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View ,Image } from 'react-native';
 
 import img from "./assets/asta.jpg";
+import Component_ from './Component.js'
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Aula de React Native </Text>
+
+      <Component_ /> 
 
       <Image
       style={styles.img}
@@ -15,6 +18,7 @@ export default function App() {
       <StatusBar style="auto" />
     </View>
   );
+  
 }
 
 const styles = StyleSheet.create({
@@ -28,5 +32,5 @@ const styles = StyleSheet.create({
     width: 1000,
     height: 150
   },
-  titulo: { color: '#0B5E70', fontSize: 30, fontStyle: 'italic', fontWeight: 'bold'}
+  titulo: { color: '#0B5E70', fontSize: 24, marginBottom: 24}, 
 });
