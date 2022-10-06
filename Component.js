@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { StyleSheet, Text, Pressable, Image, View} from 'react-native';
+import { StyleSheet, Text, Pressable, Image, View, SafeAreaView} from 'react-native';
 
 
 export default function Component_() {
@@ -18,14 +18,14 @@ export default function Component_() {
        
        }
     return (
-     <View style={styles.comp}>
+     <SafeAreaView style={styles.comp}>
 
-    <Text style={styles.til}>MEUS FILMES E SÉRIES</Text>
+   
     <Pressable onPress={changeFoto}>
     <Image style={styles.img}  source={foto}/>
     <Text style={styles.subt}>@Jonas Medeiros Andrade</Text>
     </Pressable>
-     </View>
+     </SafeAreaView>
 
     );
 }
@@ -36,7 +36,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#5d4f5e',
         padding: 10,
         borderRadius: 30,
-        maxHeight: '100%'
+        maxHeight: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        
+
     },
     til: {
         color: '#2f2b3a',
@@ -47,13 +51,15 @@ const styles = StyleSheet.create({
         color: '#959ba9',
         fontSize: 18,
         fontWeight: '100',
-        marginTop: 5
+        marginTop: 0
     },
     img: {
-     width: 340,
-     height: 540,
+    maxWidth: '100%',
+     width: 350,
+     height: 560,
      borderRadius: 20,
-     marginTop: 20,
+     marginTop: 10,
+    //  marginBottom: 10
      
 
      

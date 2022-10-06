@@ -1,16 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, } from 'react-native';
+import {StyleSheet} from 'react-native';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Component_ from './Component.js';
+import Home from './Home.js';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-   
-   <Component_></Component_>
-      
-      
-      <StatusBar style="auto" />
-    </View>
+   <NavigationContainer >
+    <Stack.Navigator  initialRouteName='FILMES E SÉRIES & DOCUMENTARIOS'>
+      <Stack.Screen name='Home  - EM PROGRESSO' component={Home}/>
+      <Stack.Screen name='FILMES E SÉRIES & DOCUMENTARIOS' component={Component_}/>
+    </Stack.Navigator>
+   </NavigationContainer>
   );
   
 }
