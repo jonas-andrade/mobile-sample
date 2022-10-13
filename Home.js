@@ -12,7 +12,7 @@ export default function Component_() {
         
             
         <Button  onPress={btnFN} title="em progresso....." color="#841584" />
-            <Text style={styles.subt}>@Jonas Medeiros</Text>
+            <Text style={styles.subt}>@Jonas Medeirosexit</Text>
    
      </View>
 

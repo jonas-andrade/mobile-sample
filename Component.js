@@ -8,7 +8,7 @@ export default function Component_() {
     let [num ,setNum] = useState(0)
     const [foto ,setFoto] = useState(require(`./assets/Thumbnails/${num}.jpg`))
     function changeFoto(){
-        if(num>=44){setNum(num=0);} setNum(++num);
+        if(num>=169){setNum(num=0);} setNum(++num);
         setFoto(require(`./assets/Thumbnails/${num}.jpg`));
         document.querySelector(".css-accessibilityImage-9pa8cd").src = foto
 
