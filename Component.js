@@ -1,31 +1,31 @@
 
 import { useState } from 'react';
-import { StyleSheet, Text, Pressable, Image, View, SafeAreaView} from 'react-native';
+import { StyleSheet, Text, Pressable, Image, View, SafeAreaView } from 'react-native';
 
 
 export default function Component_() {
     // não consegui resolver esse problema de contagem sem o useState()
-    let [num ,setNum] = useState(0)
-    const [foto ,setFoto] = useState(require(`./assets/Thumbnails/${num}.jpg`))
-    function changeFoto(){
-        if(num>=169){setNum(num=0);} setNum(++num);
+    let [num, setNum] = useState(0)
+    const [foto, setFoto] = useState(require(`./assets/Thumbnails/${num}.jpg`))
+    function changeFoto() {
+        if (num >= 169) { setNum(num = 0); } setNum(++num);
         setFoto(require(`./assets/Thumbnails/${num}.jpg`));
         document.querySelector(".css-accessibilityImage-9pa8cd").src = foto
 
         //DEBUG:
-        console.log("useState: "+foto)
+        console.log("useState: " + foto)
         console.log(document.querySelector("img"))
-       
-       }
-    return (
-     <SafeAreaView style={styles.comp}>
 
-   
-    <Pressable onPress={changeFoto}>
-    <Image style={styles.img}  source={foto}/>
-    <Text style={styles.subt}>@Jonas Medeiros Andrade</Text>
-    </Pressable>
-     </SafeAreaView>
+    }
+    return (
+        <SafeAreaView style={styles.comp}>
+
+
+            <Pressable onPress={changeFoto}>
+                <Image style={styles.img} source={foto} />
+                <Text style={styles.subt}>@Jonas Medeiros Andrade</Text>
+            </Pressable>
+        </SafeAreaView>
 
     );
 }
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         maxHeight: '100%',
         alignItems: 'center',
         justifyContent: 'center',
-        
+
 
     },
     til: {
@@ -54,15 +54,15 @@ const styles = StyleSheet.create({
         marginTop: 0
     },
     img: {
-    maxWidth: '100%',
-     width: 350,
-     height: 560,
-     borderRadius: 20,
-     marginTop: 10,
-    //  marginBottom: 10
-     
+        maxWidth: '100%',
+        width: 350,
+        height: 560,
+        borderRadius: 20,
+        marginTop: 10,
+        //  marginBottom: 10
 
-     
+
+
     },
-      
+
 });
